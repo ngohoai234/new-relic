@@ -1,9 +1,12 @@
 import Image from "next/image";
 import styles from "./page.module.css";
+import ServerLogging from "@/components/ServerLogging";
+import TestLogging from "@/components/TestLogging";
 
 export default function Home() {
   return (
     <div className={styles.page}>
+      <ServerLogging />
       <main className={styles.main}>
         <Image
           className={styles.logo}
@@ -19,6 +22,8 @@ export default function Home() {
           </li>
           <li>Save and see your changes instantly.</li>
         </ol>
+
+        <TestLogging />
 
         <div className={styles.ctas}>
           <a
